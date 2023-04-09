@@ -15,16 +15,17 @@
 }
 
 .submit-btn {
-    background-color: rgb(194, 123, 0) !important;
-    color: rgb(46, 26, 0) !important;
+    background-color: #b77d00 !important;
+    color: #3a2800 !important;
     border: transparent !important;
     font-family: Tilt Warp, sans-serif !important;
     width: 100%;
 }
 
 .submit-btn:hover {
-    background-color: rgb(249, 180, 61) !important;
-    color: rgb(46, 26, 0) !important;
+    background: #ffae00 !important;
+    color: #3a2800;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .login-link-box {
@@ -38,7 +39,7 @@
 }
 
 .login-link:hover {
-    color: rgb(255, 80, 11);
+    color: #ffae00;
 }
 
 .form-label {

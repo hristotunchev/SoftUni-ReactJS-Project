@@ -13,12 +13,12 @@ export default function Header() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link as={Link} to="/">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/catalog">Catalog</Nav.Link>
-                        <Nav.Link as={Link} to="/create">Create</Nav.Link>
-                        <Nav.Link as={Link} to="/login">Login</Nav.Link>
-                        <Nav.Link as={Link} to="/register">Register</Nav.Link>
-                        <Nav.Link as={Link} to="/logout">Logout</Nav.Link>
+                        <Nav.Link as={Link} to="/" className="nav-link">Home</Nav.Link>
+                        <Nav.Link as={Link} to="/catalog" className="nav-link">Catalog</Nav.Link>
+                        <Nav.Link as={Link} to="/create" className="nav-link">Create</Nav.Link>
+                        <Nav.Link as={Link} to="/login" className="nav-link">Login</Nav.Link>
+                        <Nav.Link as={Link} to="/register" className="nav-link">Register</Nav.Link>
+                        <Nav.Link as={Link} to="/logout" className="nav-link">Logout</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

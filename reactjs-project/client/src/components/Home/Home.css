@@ -8,5 +8,52 @@
 
 .card {
     margin: 2px;
-    font-family: Tilt Warp, sans-serif;
+    font-family: "Tilt Warp", sans-serif;
 }
+
+/* ----- */
+
+.home .row .content h3 {
+    font-family: "Monoton", sans-serif;
+    text-shadow: 3px 3px black;
+    color: #815800;
+    font-size: 6rem;
+}
+
+.home .row .content p {
+    font-family: "Monoton", sans-serif;
+    text-shadow: 3px 3px black;
+    color: #815800;
+    font-size: 3rem;
+    line-height: 2;
+    padding: 1rem 0;
+    display: inline-block;
+}
+
+.btn-container {
+    /* display: flex; */
+    align-items: center;
+}
+
+.homepage-btn {
+    margin-left: 2rem;
+    display: inline-block;
+    padding: 0.3rem 2rem;
+    border-radius: 0.5rem;
+    color: #3a2800;
+    /* background: #815800; */
+    background: #b77d00;
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: "Tilt Warp", sans-serif;
+  }
+  
+  .homepage-btn:hover {
+    /* background: #d69200; */
+    background: #ffae00;
+    color: #3a2800;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
+  }
