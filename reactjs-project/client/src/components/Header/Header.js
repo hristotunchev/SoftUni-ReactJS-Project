@@ -20,11 +20,12 @@ export default function Header() {
                     <Nav className="me-auto">
                         <Nav.Link as={Link} to="/" className="nav-link">Home</Nav.Link>
                         <Nav.Link as={Link} to="/catalog" className="nav-link">Catalog</Nav.Link>
-                        
+
                         {isAuthenticated && (
                             <>
                                 <Nav.Link as={Link} to="/create" className="nav-link">Create</Nav.Link>
                                 <Nav.Link as={Link} to="/logout" className="nav-link">Logout</Nav.Link>
+                                <Nav.Link as="span" className="user-email" disabled={true}>{userEmail}</Nav.Link>
                             </>
                         )}
 
@@ -34,7 +35,6 @@ export default function Header() {
                                 <Nav.Link as={Link} to="/register" className="nav-link">Register</Nav.Link>
                             </>
                         )}
-
 
                     </Nav>
                 </Navbar.Collapse>
