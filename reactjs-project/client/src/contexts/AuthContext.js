@@ -50,7 +50,7 @@ export const AuthProvider = ({
         await authService.logout();
 
         setAuth({});
-        localStorage.clear();   // check this out ???
+        // localStorage.clear();   // check this out ???
     };
 
     const contextValues = {
