@@ -6,6 +6,7 @@ import Login from './components/Login/Login.js';
 import Register from './components/Register/Register.js';
 import Create from './components/Create/Create.js';
 import Catalog from './components/Catalog/Catalog.js';
+// import Footer from './components/Footer/Footer.js';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,6 +26,7 @@ function App() {
                     <Route path='/catalog' element={<Catalog />} />
                 </Routes>
             </main>
+            {/* <Footer /> */}
         </div>
     );
 }
