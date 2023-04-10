@@ -19,11 +19,11 @@ export default function Header() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="m-auto">
                         <Nav.Link as={Link} to="/" className="nav-link">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/catalog" className="nav-link">Catalog</Nav.Link>
+                        <Nav.Link as={Link} to="/catalog" className="nav-link">Garage</Nav.Link>
 
                         {isAuthenticated && (
                             <>
-                                <Nav.Link as={Link} to="/create" className="nav-link">Create</Nav.Link>
+                                <Nav.Link as={Link} to="/create" className="nav-link">Add Vehicle</Nav.Link>
                                 <Nav.Link as={Link} to="/logout" className="nav-link">Logout</Nav.Link>
                                 <Nav.Link as="span" className="user-email" disabled={true}>{userEmail}</Nav.Link>
                             </>
