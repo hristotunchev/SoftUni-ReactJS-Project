@@ -17,7 +17,7 @@ export default function Header() {
                 {/* <Navbar.Brand as={Link} to="/">Test Navbar</Navbar.Brand> */}
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
+                    <Nav className="m-auto">
                         <Nav.Link as={Link} to="/" className="nav-link">Home</Nav.Link>
                         <Nav.Link as={Link} to="/catalog" className="nav-link">Catalog</Nav.Link>
 
