@@ -11,12 +11,17 @@ export default function Create() {
 
                 <Form.Group className="mb-3">
                     {/* <Form.Label>Name</Form.Label> */}
-                    <Form.Control type="text" placeholder="Name" />
+                    <Form.Control type="text" placeholder="Make" />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
                     {/* <Form.Label>Model</Form.Label> */}
                     <Form.Control type="text" placeholder="Model" />
+                </Form.Group>
+
+                <Form.Group className="mb-3">
+                    {/* <Form.Label>Model</Form.Label> */}
+                    <Form.Control type="number" placeholder="Production Year" />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
