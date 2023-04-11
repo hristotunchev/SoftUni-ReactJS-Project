@@ -1,11 +1,10 @@
-
 .form-container {
     align-items: center;
     justify-content: center;
     display: flex;
 }
 
-.create-form {
+.edit-form {
     width: 22rem;
     /* max-width: 50%; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;

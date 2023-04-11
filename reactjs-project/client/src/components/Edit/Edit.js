@@ -1,27 +1,39 @@
-import { useContext } from "react";
+import { useEffect, useContext } from "react";
+import { useParams } from "react-router-dom";
 
 import { CarContext } from '../../contexts/CarContext.js';
-import { useForm } from '../../hooks/useForm.js';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import { useForm } from "../../hooks/useForm.js";
+import { useService } from "../../hooks/useService.js";
+import { carServiceFactory } from "../../services/carService.js";
 
-import './Create.css';
+import './Edit.css';
 
-export default function Create() {
-    const { onCreateCarSubmit } = useContext(CarContext);
+export default function Edit() {
+    const { onCarEditSubmit } = useContext(CarContext);
+    const { carId } = useParams();
+    const carService = useService(carServiceFactory);
+    
     const { values, changeHandler, onSubmit } = useForm({
+        _id: '',
         make: '',
         model: '',
         coverPhotoUrl: '',
         secondPhotoUrl: '',
         thirdPhotoUrl: '',
         description: ''
-    }, onCreateCarSubmit);
+    }, onCarEditSubmit);
+
+    useEffect(() => {
+        carService.getOne(carId)
+            .then(result => {
+                changeValues(result);
+            });
+    }, [carId]);
 
     return (
         <div className="form-container">
-            <Form className="create-form" method="POST" onSubmit={onSubmit}>
-                <Form.Label className="form-label">Add New Vehicle</Form.Label>
+            <Form className="edit-form" method="POST" onSubmit={onSubmit}>
+                <Form.Label className="form-label">Edit Vehicle</Form.Label>
 
                 <Form.Group className="mb-3">
                     {/* <Form.Label>Name</Form.Label> */}

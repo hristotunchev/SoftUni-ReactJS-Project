@@ -15,11 +15,6 @@ export default function Catalog() {
                 <Card.Img variant="top" src="https://images.ams.bg/images/galleries/216382/bmw-seriya-5-2023-1636665662_big.jpg" />
                 <Card.Body>
                   <Card.Title>Card title</Card.Title>
-                  <Card.Text>
-                    This is a longer card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </Card.Text>
                 </Card.Body>
                 <Button as={Link} to="/item/details" className="details-btn">Details</Button>
               </Card>
