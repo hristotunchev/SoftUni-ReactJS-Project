@@ -21,8 +21,7 @@ export const AuthProvider = ({
 
             setAuth(result);
 
-            navigate('/');
-            // navigate('/catalog');    // Navigate after fixing Catalog
+            navigate('/catalog');
         } catch (error) {
             console.log(error);     // we have to notify user instead
         }
@@ -39,8 +38,7 @@ export const AuthProvider = ({
 
             setAuth(result);
 
-            navigate('/');
-            // navigate('/catalog');    // Navigate after fixing Catalog
+            navigate('/catalog');
         } catch (error) {
             console.log('Imash greshka brat!');     // we have to notify user instead
         }
