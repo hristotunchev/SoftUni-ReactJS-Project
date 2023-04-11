@@ -1,25 +1,18 @@
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
+import { useContext } from 'react';
 
+import { CarContext } from '../../contexts/CarContext.js'
+import CatalogItem from './CatalogItem/CatalogItem.js';
+import Row from 'react-bootstrap/Row';
 import './Catalog.css';
 
 export default function Catalog() {
+    const { cars } = useContext(CarContext);
+
     return (
-        <Row xs={3} md={4} className="g-4" style={{margin: '0px 15px 0px 15px'}}>
-          {Array.from({ length: 5 }).map((_, idx) => (
-            <Col>
-              <Card>
-                <Card.Img variant="top" src="https://images.ams.bg/images/galleries/216382/bmw-seriya-5-2023-1636665662_big.jpg" />
-                <Card.Body>
-                  <Card.Title>Card title</Card.Title>
-                </Card.Body>
-                <Button as={Link} to="/item/details" className="details-btn">Details</Button>
-              </Card>
-            </Col>
-          ))}
+        <Row xs={3} md={4} className="g-4" style={{ margin: '0px 15px 0px 15px', justifyContent: "center" }}>
+            {cars.map(x => <CatalogItem key={x._id} {...x} />)}
+
+            {cars.length === 0 && <h3 className="no-cars">No cars yet</h3>}
         </Row>
-      );
+    );
 };

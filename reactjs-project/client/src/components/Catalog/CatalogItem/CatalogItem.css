@@ -1,0 +1,19 @@
+.catalogItem-card {
+    background-color: rgb(97, 68, 23) !important;
+    border: 5px solid rgb(97, 68, 23) !important;
+    border-radius: 5px !important;
+}
+
+.details-btn {
+    background-color: #b77d00 !important;
+    color: #3a2800 !important;
+    border: transparent !important;
+    font-family: Tilt Warp, sans-serif !important;
+    width: 100% !important;
+}
+
+.details-btn:hover {
+    background: #ffae00 !important;
+    color: #3a2800 !important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
