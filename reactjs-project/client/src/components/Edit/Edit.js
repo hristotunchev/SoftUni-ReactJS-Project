@@ -1,5 +1,7 @@
 import { useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 import { CarContext } from '../../contexts/CarContext.js';
 import { useForm } from "../../hooks/useForm.js";
@@ -13,7 +15,7 @@ export default function Edit() {
     const { carId } = useParams();
     const carService = useService(carServiceFactory);
     
-    const { values, changeHandler, onSubmit } = useForm({
+    const { values, changeHandler, onSubmit, changeValues } = useForm({
         _id: '',
         make: '',
         model: '',
@@ -102,7 +104,7 @@ export default function Edit() {
                 </Form.Group>
 
                 <Button variant="primary" type="submit" className="submit-btn">
-                    Add Vehicle
+                    Edit
                 </Button>
             </Form>
         </div>

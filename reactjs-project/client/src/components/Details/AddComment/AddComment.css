@@ -1,0 +1,16 @@
+.comment-modal {
+    background-color: rgb(97, 68, 23);
+    margin-top: 30px !important;
+}
+
+.comment-btn {
+    background-color: #b77d00 !important;
+    border-color: #b77d00 !important;
+}
+
+.comment-btn:hover {
+    background-color: #ffae00 !important;
+    border-color: #ffae00 !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+
+}
