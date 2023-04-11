@@ -41,7 +41,6 @@ export default function Edit() {
                     {/* <Form.Label>Name</Form.Label> */}
                     <Form.Control
                         type="text"
-                        placeholder="Make"
                         name="make"
                         value={values.make}
                         onChange={changeHandler}
@@ -52,7 +51,6 @@ export default function Edit() {
                     {/* <Form.Label>Model</Form.Label> */}
                     <Form.Control
                         type="text"
-                        placeholder="Model"
                         name="model"
                         value={values.model}
                         onChange={changeHandler}
@@ -63,7 +61,6 @@ export default function Edit() {
                     {/* <Form.Label>Model</Form.Label> */}
                     <Form.Control
                         type="text"
-                        placeholder="Cover Photo URL"
                         name="coverPhotoUrl"
                         value={values.coverPhotoUrl}
                         onChange={changeHandler}
@@ -74,7 +71,6 @@ export default function Edit() {
                     {/* <Form.Label>Image URL</Form.Label> */}
                     <Form.Control
                         type="text"
-                        placeholder="Photo 2 URL"
                         name="secondPhotoUrl"
                         value={values.secondPhotoUrl}
                         onChange={changeHandler}
@@ -85,7 +81,6 @@ export default function Edit() {
                     {/* <Form.Label>Image URL</Form.Label> */}
                     <Form.Control
                         type="text"
-                        placeholder="Photo 3 URL"
                         name="thirdPhotoUrl"
                         value={values.thirdPhotoUrl}
                         onChange={changeHandler}
@@ -95,7 +90,6 @@ export default function Edit() {
                 <Form.Group>
                     <Form.Control
                         as="textarea"
-                        placeholder="Description"
                         style={{ height: '100px', marginBottom: '15px' }}
                         name="description"
                         value={values.description}
