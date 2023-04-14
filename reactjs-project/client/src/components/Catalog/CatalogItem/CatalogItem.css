@@ -17,3 +17,7 @@
     color: #3a2800 !important;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+.ctlg-car-name {
+    color: rgb(22, 22, 22);
+}

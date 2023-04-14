@@ -13,32 +13,44 @@
 }
 
 .btn-container {
-    justify-content: right !important;
+    /* justify-content: right !important; */
+    margin-bottom: 30px !important;
 }
 
 .edit-btn {
     background-color: dimgray !important;
-    width: 50%;
+    width: 20%;
     border-color: dimgray !important;
+    margin-right: 3px;
 }
 
 .edit-btn:hover {
     background-color: rgb(155, 155, 155) !important;
-    width: 50%;
+    width: 20%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
 
 }
 
 .delete-btn {
     background-color: rgb(112, 0, 0) !important;
-    width: 50%;
+    width: 20%;
     border-color: rgb(112, 0, 0) !important;
+    margin-left: 3px;
 }
 
 .delete-btn:hover {
     background-color: rgb(191, 0, 0) !important;
-    width: 50%;
+    width: 20%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
 
+}
+
+.car-name {
+    font-size: 1.9rem !important;
+    color: rgb(22, 22, 22);
+}
+
+.car-info {
+    color: rgb(22, 22, 22);
 }
 

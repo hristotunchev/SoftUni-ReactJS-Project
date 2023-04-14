@@ -15,7 +15,7 @@ export default function CatalogItem({
             <Card className="catalogItem-card">
                 <Card.Img variant="top" src={coverPhotoUrl} />
                 <Card.Body>
-                    <Card.Title>{make} {model}</Card.Title>
+                    <Card.Title className="ctlg-car-name">{make} {model}</Card.Title>
                 </Card.Body>
                 <Button as={Link} to={`/catalog/${_id}`} className="details-btn">Details</Button>
             </Card>

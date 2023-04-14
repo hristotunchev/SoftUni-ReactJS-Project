@@ -25,7 +25,7 @@ export default function AddComment({
                         <Form.Control
                             as="textarea"
                             placeholder="Enter comment"
-                            style={{ height: '100px', marginBottom: '15px' }}
+                            style={{ height: '100px', marginBottom: '15px', fontFamily: "Verdana" }}
                             name="comment"
                             value={values.comment}
                             onChange={changeHandler}

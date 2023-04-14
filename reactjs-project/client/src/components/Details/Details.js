@@ -100,8 +100,8 @@ export default function Details() {
                 </Carousel>
 
                 <Card.Body>
-                    <Card.Title>{car.make} {car.model}</Card.Title>
-                    <Card.Text>
+                    <Card.Title className="car-name">{car.make} {car.model}</Card.Title>
+                    <Card.Text className="car-info">
                         {car.description}
                     </Card.Text>
 
@@ -118,7 +118,7 @@ export default function Details() {
                             <Comment key={x._id} author={x.author.email} comment={x.comment} />
                         ))}
 
-                        {!car.comments?.length && <p className="no-comment">No comments.</p>}
+                        {!car.comments?.length && <p className="no-comment">No comments yet.</p>}
 
                     </ListGroup>
 
