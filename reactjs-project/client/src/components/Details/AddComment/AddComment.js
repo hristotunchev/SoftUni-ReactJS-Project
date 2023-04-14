@@ -16,7 +16,7 @@ export default function AddComment({
     return (
         <Modal.Dialog className="comment-modal">
             <Modal.Header style={{ justifyContent: "center" }}>
-                <Modal.Title style={{ fontSize: "1.7rem", marginTop: "1rem" }}>Add Comment</Modal.Title>
+                <Modal.Title style={{ fontSize: "1.7rem", marginTop: "1rem", marginBottom: "0.3rem" }}>Add Comment</Modal.Title>
             </Modal.Header>
 
             <Modal.Body>
