@@ -80,23 +80,24 @@ export default function Details() {
                         <img
                             className="d-block w-100"
                             src={car.coverPhotoUrl}
+                            alt="First slide"
                         />
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
                             src={car.secondPhotoUrl}
+                            alt="Second slide"
                         />
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
                             src={car.thirdPhotoUrl}
+                            alt="Third slide"
                         />
                     </Carousel.Item>
                 </Carousel>
-
-                {/* <Card.Img variant="top" src="https://www.concorsodeleganzavilladeste.com/wp-content/uploads/2022/05/88_BMWM1Procar-1200x900.jpg" /> */}
 
                 <Card.Body>
                     <Card.Title>{car.make} {car.model}</Card.Title>
@@ -117,9 +118,6 @@ export default function Details() {
                             <Comment key={x._id} author={x.author.email} comment={x.comment} />
                         ))}
 
-                        {/* <li key={x._id} className="comment">
-                            <p>{x.author.email}: {x.comment}</p>
-                        </li> */}
                         {!car.comments?.length && <p className="no-comment">No comments.</p>}
 
                     </ListGroup>
