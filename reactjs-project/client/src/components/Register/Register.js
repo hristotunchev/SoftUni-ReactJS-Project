@@ -28,8 +28,8 @@ export default function Register() {
             <Form className="register-form" method="POST" onSubmit={onSubmit}>
                 <Form.Label className="form-label">Register</Form.Label>
 
-                <Form.Group className="mb-3">
-                    {/* <Form.Label>Email</Form.Label> */}
+                <Form.Group className="form-group">
+                    <Form.Label className="input-label">Email</Form.Label>
                     <Form.Control
                         type="email"
                         placeholder="Enter email"
@@ -39,22 +39,22 @@ export default function Register() {
                     />
                 </Form.Group>
 
-                <Form.Group className="mb-3">
-                    {/* <Form.Label>Password</Form.Label> */}
+                <Form.Group className="form-group">
+                    <Form.Label className="input-label">Password</Form.Label>
                     <Form.Control
                         type="password"
-                        placeholder="Password"
+                        placeholder="Enter password"
                         name={RegisterFormKeys.Password}
                         value={values[RegisterFormKeys.Password]}
                         onChange={changeHandler}
                     />
                 </Form.Group>
 
-                <Form.Group className="mb-3">
-                    {/* <Form.Label>Repeat Password</Form.Label> */}
+                <Form.Group className="form-group">
+                    <Form.Label className="input-label">Repeat Password</Form.Label>
                     <Form.Control
                         type="password"
-                        placeholder="Repeat Password"
+                        placeholder="Repeat password"
                         name={RegisterFormKeys.RepeatPassword}
                         value={values[RegisterFormKeys.RepeatPassword]}
                         onChange={changeHandler}

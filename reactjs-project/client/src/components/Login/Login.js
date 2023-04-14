@@ -26,8 +26,8 @@ export default function Login() {
             <Form className="login-form" method="POST" onSubmit={onSubmit}>
                 <Form.Label className="form-label">Login</Form.Label>
 
-                <Form.Group className="mb-3">
-                    {/* <Form.Label>Email</Form.Label> */}
+                <Form.Group className="form-group">
+                    <Form.Label className="input-label">Email</Form.Label>
                     <Form.Control
                         type="email"
                         placeholder="Enter email"
@@ -37,8 +37,8 @@ export default function Login() {
                     />
                 </Form.Group>
 
-                <Form.Group className="mb-3">
-                    {/* <Form.Label>Password</Form.Label> */}
+                <Form.Group className="form-group">
+                    <Form.Label className="input-label">Password</Form.Label>
                     <Form.Control
                         type="password"
                         placeholder="Password"

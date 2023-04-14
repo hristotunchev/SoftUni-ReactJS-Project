@@ -6,11 +6,13 @@
 .comment-btn {
     background-color: #b77d00 !important;
     border-color: #b77d00 !important;
+    color: #3a2800 !important;
 }
 
 .comment-btn:hover {
     background-color: #ffae00 !important;
     border-color: #ffae00 !important;
+    color: #3a2800 !important;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
 
 }

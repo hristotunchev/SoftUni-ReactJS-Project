@@ -14,7 +14,7 @@ export default function Edit() {
     const { onCarEditSubmit } = useContext(CarContext);
     const { carId } = useParams();
     const carService = useService(carServiceFactory);
-    
+
     const { values, changeHandler, onSubmit, changeValues } = useForm({
         _id: '',
         make: '',
@@ -37,8 +37,8 @@ export default function Edit() {
             <Form className="edit-form" method="POST" onSubmit={onSubmit}>
                 <Form.Label className="form-label">Edit Vehicle</Form.Label>
 
-                <Form.Group className="mb-3">
-                    {/* <Form.Label>Name</Form.Label> */}
+                <Form.Group className="form-group">
+                    <Form.Label className="input-label">Make</Form.Label>
                     <Form.Control
                         type="text"
                         name="make"
@@ -47,8 +47,8 @@ export default function Edit() {
                     />
                 </Form.Group>
 
-                <Form.Group className="mb-3">
-                    {/* <Form.Label>Model</Form.Label> */}
+                <Form.Group className="form-group">
+                    <Form.Label className="input-label">Model</Form.Label>
                     <Form.Control
                         type="text"
                         name="model"
@@ -57,8 +57,8 @@ export default function Edit() {
                     />
                 </Form.Group>
 
-                <Form.Group className="mb-3">
-                    {/* <Form.Label>Model</Form.Label> */}
+                <Form.Group className="form-group">
+                    <Form.Label className="input-label">Cover Photo URL</Form.Label>
                     <Form.Control
                         type="text"
                         name="coverPhotoUrl"
@@ -67,8 +67,8 @@ export default function Edit() {
                     />
                 </Form.Group>
 
-                <Form.Group className="mb-3">
-                    {/* <Form.Label>Image URL</Form.Label> */}
+                <Form.Group className="form-group">
+                    <Form.Label className="input-label">Photo 2 URL</Form.Label>
                     <Form.Control
                         type="text"
                         name="secondPhotoUrl"
@@ -77,8 +77,8 @@ export default function Edit() {
                     />
                 </Form.Group>
 
-                <Form.Group className="mb-3">
-                    {/* <Form.Label>Image URL</Form.Label> */}
+                <Form.Group className="form-group">
+                    <Form.Label className="input-label">Photo 3 URL</Form.Label>
                     <Form.Control
                         type="text"
                         name="thirdPhotoUrl"
@@ -88,6 +88,7 @@ export default function Edit() {
                 </Form.Group>
 
                 <Form.Group>
+                    <Form.Label className="input-label">Description</Form.Label>
                     <Form.Control
                         as="textarea"
                         style={{ height: '100px', marginBottom: '15px' }}
