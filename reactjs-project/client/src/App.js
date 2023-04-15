@@ -14,7 +14,7 @@ import Edit from './components/Edit/Edit.js';
 import NotFound from './components/NotFound/NotFound.js';
 import UserGuard from './components/routeGuards/UserGuard.js';
 import OwnerGuard from './components/routeGuards/OwnerGuard.js';
-// import Footer from './components/Footer/Footer.js';
+import Footer from './components/Footer/Footer.js';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -26,7 +26,7 @@ function App() {
                 <div className="App">
                     <Header />
 
-                    <main id="main-content">
+                    <main className="main-content">
                         <Routes>
                             <Route path='/' element={<Home />} />
                             <Route path='/login' element={<Login />} />
@@ -44,7 +44,7 @@ function App() {
                         </Routes>
                     </main>
 
-                    {/* <Footer /> */}
+                    <Footer />
                 </div>
             </CarProvider>
         </AuthProvider>
