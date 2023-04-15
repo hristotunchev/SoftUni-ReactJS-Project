@@ -9,9 +9,8 @@ export const getAll = async (carId) => {
     const relationQuery = encodeURIComponent(`author=_ownerId:users`);
 
     const result = await request.get(`${baseUrl}?where=${searchQuery}&load=${relationQuery}`);
-    // console.log(result);
+
     const comments = Object.values(result);
-    // console.log(comments);
 
     return comments;
 };
