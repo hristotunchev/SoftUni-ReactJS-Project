@@ -10,7 +10,7 @@ export const CarProvider = ({
 }) => {
     const navigate = useNavigate();
     const [cars, setCars] = useState([]);
-    const carService = carServiceFactory(); // auth.accessToken ???
+    const carService = carServiceFactory();
 
     useEffect(() => {
         carService.getAll()
@@ -30,7 +30,6 @@ export const CarProvider = ({
     const onCarEditSubmit = async (values) => {
         const result = await carService.edit(values._id, values);
 
-        // Changing state
         setCars(state => state.map(x => x._id === values._id ? result : x));
 
         navigate(`/catalog/${values._id}`);
