@@ -12,6 +12,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import Modal from 'react-bootstrap/Modal';
 
 import Comment from './Comment/Comment.js';
 import AddComment from './AddComment/AddComment.js';
@@ -24,6 +25,7 @@ export default function Details() {
     const [car, dispatch] = useReducer(carReducer, {});
     const carService = useService(carServiceFactory);
     const navigate = useNavigate();
+    const [showDeleteVehicle, setShowDeleteVehicle] = useState(false);
 
     useEffect(() => {
         Promise.all([
@@ -53,23 +55,19 @@ export default function Details() {
     const isOwner = car._ownerId === userId;
 
     const onDeleteClick = async () => {
-        // eslint-disable-next-line no-restricted-globals
-        const result = confirm(`Delete ${car.make} ${car.model}?`);
-        // we should do like this: showDeleteDialog(true) + conditional rendering - check Todos demo with bootstrap
-
-        if (result) {
             await carService.delete(car._id);
 
-            // TODO: delete from state
             deleteCar(car._id);
 
             navigate('/catalog');
-        };
     };
 
     const onEditClick = () => {
         navigate(`/catalog/${car._id}/edit`);
     };
+
+    const handleClose = () => setShowDeleteVehicle(false);
+    const handleShow = () => setShowDeleteVehicle(true);
 
     return (
         <div className="details-card">
@@ -108,7 +106,7 @@ export default function Details() {
                     {isOwner && (
                         <div className="btn-container" style={{ justifyContent: "center" }}>
                             <Button variant="primary" className="edit-btn" onClick={onEditClick}>Edit</Button>
-                            <Button variant="primary" className="delete-btn" onClick={onDeleteClick}>Delete</Button>
+                            <Button variant="primary" className="delete-btn" onClick={handleShow}>Delete</Button>
                         </div>
                     )}
 
@@ -126,6 +124,21 @@ export default function Details() {
 
                 </Card.Body>
             </Card>
+
+            <Modal className="delete-modal" show={showDeleteVehicle} onHide={handleClose}>
+                <Modal.Header className="mdheader" closeButton>
+                    <Modal.Title><span style={{fontSize: "30px"}}>Delete vehicle</span></Modal.Title>
+                </Modal.Header>
+                <Modal.Body className="mdb">Are you sure you want to delete <span style={{fontWeight: "bold"}}>{car.make} {car.model}</span>?</Modal.Body>
+                <Modal.Footer className="mdfooter">
+                    <Button variant="secondary" className="mdcb" onClick={handleClose}>
+                        Cancel
+                    </Button>
+                    <Button variant="primary" className="mddb" onClick={onDeleteClick}>
+                        Delete
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </div>
     );
-}
+};

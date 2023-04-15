@@ -54,3 +54,45 @@
     color: rgb(22, 22, 22);
 }
 
+.delete-modal {
+    font-family: "Tilt Warp";
+}
+
+.mdheader {
+    background-color: rgb(97, 68, 23) !important;
+    color: rgb(22, 22, 22) !important;
+    border: 5px solid rgb(97, 68, 23) !important;
+}
+
+.mdb {
+    background-color: rgb(141, 104, 50) !important;
+    color: rgb(22, 22, 22) !important;
+    font-size: 19px;
+}
+
+.mdfooter {
+    background-color: rgb(97, 68, 23) !important;
+    color: rgb(22, 22, 22) !important;
+    border: 5px solid rgb(97, 68, 23) !important;
+}
+
+.mdcb {
+    background-color: dimgray !important;
+    border-color: dimgray !important;
+}
+
+.mdcb:hover {
+    background-color: rgb(155, 155, 155) !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+.mddb {
+    background-color: rgb(112, 0, 0) !important;
+    border-color: rgb(112, 0, 0) !important;
+}
+
+.mddb:hover {
+    background-color: rgb(191, 0, 0) !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
