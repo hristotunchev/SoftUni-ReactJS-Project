@@ -1,0 +1,14 @@
+.not-found {
+    font-family: "Monoton", sans-serif;
+    font-size: 18rem;
+    color: #815800;
+    text-shadow: 3px 3px black;
+
+}
+
+.not-found-msg {
+    font-family: "Tilt Warp", sans-serif;
+    font-size: 3rem;
+    color: #815800;
+    text-shadow: 3px 3px black;
+}

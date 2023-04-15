@@ -10,6 +10,7 @@ import Create from './components/Create/Create.js';
 import Catalog from './components/Catalog/Catalog.js';
 import Details from './components/Details/Details.js';
 import Edit from './components/Edit/Edit.js';
+import NotFound from './components/NotFound/NotFound.js';
 // import Footer from './components/Footer/Footer.js';
 
 import './App.css';
@@ -33,6 +34,7 @@ function App() {
                             <Route path='/catalog' element={<Catalog />} />
                             <Route path='/catalog/:carId' element={<Details />} />
                             <Route path='/catalog/:carId/edit' element={<Edit />} />
+                            <Route path='*' element={<NotFound />} />
                         </Routes>
                     </main>
 
