@@ -6,7 +6,6 @@ import { useLocalStorage } from "../hooks/useLocalStorage.js";
 
 export const AuthContext = createContext();
 
-// This is wrapper component
 export const AuthProvider = ({
     children
 }) => {
@@ -23,14 +22,14 @@ export const AuthProvider = ({
 
             navigate('/catalog');
         } catch (error) {
-            console.log(error);     // we have to notify user instead
+            console.log(error);
         }
     };
 
     const onRegisterSubmit = async (values) => {
-        const { repeatPassword, ...registerData } = values;    // this is not supposed to be here
-        if (repeatPassword !== registerData.password) {        // this is not supposed to be here
-            return;                                 // we have to notify user instead
+        const { repeatPassword, ...registerData } = values;
+        if (repeatPassword !== registerData.password) {
+            return;
         }
 
         try {
@@ -40,7 +39,7 @@ export const AuthProvider = ({
 
             navigate('/catalog');
         } catch (error) {
-            console.log('Imash greshka brat!');     // we have to notify user instead
+            console.log(error);
         }
     };
 
@@ -48,7 +47,6 @@ export const AuthProvider = ({
         await authService.logout();
 
         setAuth({});
-        // localStorage.clear();   // check this out ???
     };
 
     const contextValues = {
@@ -69,11 +67,3 @@ export const AuthProvider = ({
         </>
     );
 };
-
-
-// This custom hook lets us have only 1 import (instead of 2) for using context - check Login.js
-// export const useAuthContext = () => {
-//     const context = useContext(AuthContext);
-
-//     return context;
-// };
