@@ -13,7 +13,7 @@ export const useLocalStorage = (key, initialValue) => {
     });
 
     const setLocalStorageState = (value) => {
-        setState(value);        // check if value is function - if it is we should strigify its result
+        setState(value);        // check if value is function - if it is - strigify its result
 
         localStorage.setItem(key, JSON.stringify(value));
     };

@@ -26,7 +26,7 @@ const requester = async (method, url, data) => {
         };
     };
 
-    const response = await fetch(url, options);     // fetch may also fail - maybe try-catch
+    const response = await fetch(url, options);
 
     if (response.status === 204) {
         return {};
