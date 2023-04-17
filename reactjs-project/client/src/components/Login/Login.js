@@ -16,7 +16,7 @@ const LoginFormKeys = {
 export default function Login() {
     const { onLoginSubmit } = useContext(AuthContext);
 
-    const { values, changeHandler, onSubmit } = useForm({
+    const { values, changeHandler, onSubmit, errors } = useForm({
         [LoginFormKeys.Email]: '',
         [LoginFormKeys.Password]: '',
     }, onLoginSubmit);
@@ -35,6 +35,7 @@ export default function Login() {
                         value={values[LoginFormKeys.Email]}
                         onChange={changeHandler}
                     />
+                    {errors.email && <p className="input-err-msg">{errors.email}</p>}
                 </Form.Group>
 
                 <Form.Group className="form-group">
@@ -46,10 +47,13 @@ export default function Login() {
                         value={values[LoginFormKeys.Password]}
                         onChange={changeHandler}
                     />
+                    {errors.password && <p className="input-err-msg">{errors.password}</p>}
                 </Form.Group>
                 <Button variant="primary" type="submit" className="submit-btn">
                     Login
                 </Button>
+                {errors.emptyField && <p className="input-err-msg">{errors.emptyField}</p>}
+
                 <div className="register-link-box">
                     <p>Don't have an account?</p>
                     <Link to="/register" className="register-link">Click here to register</Link>

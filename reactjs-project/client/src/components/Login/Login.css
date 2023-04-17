@@ -6,7 +6,7 @@
 }
 
 .login-form {
-
+    width: 20rem;
     /* max-width: 50%; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: rgb(97, 68, 23);
@@ -60,6 +60,16 @@
 
 .form-group {
     margin-bottom: 3px !important;
+}
+
+.input-err-msg {
+    color: rgb(181, 0, 0);
+    background-color: #473100;
+    padding: 0px 2px 2px 2px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    margin-top: 5px !important;
 }
 
 /* div>p {

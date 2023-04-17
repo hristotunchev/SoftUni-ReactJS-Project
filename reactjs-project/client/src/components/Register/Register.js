@@ -17,10 +17,10 @@ const RegisterFormKeys = {
 export default function Register() {
     const { onRegisterSubmit } = useContext(AuthContext);
 
-    const { values, changeHandler, onSubmit } = useForm({
+    const { values, changeHandler, onSubmit, errors } = useForm({
         [RegisterFormKeys.Email]: '',
         [RegisterFormKeys.Password]: '',
-        [RegisterFormKeys.RepeatPassword]: ''      // TODO notify user - authContext
+        [RegisterFormKeys.RepeatPassword]: ''
     }, onRegisterSubmit);
 
     return (
@@ -37,6 +37,7 @@ export default function Register() {
                         value={values[RegisterFormKeys.Email]}
                         onChange={changeHandler}
                     />
+                    {errors.email && <p className="input-err-msg">{errors.email}</p>}
                 </Form.Group>
 
                 <Form.Group className="form-group">
@@ -48,6 +49,7 @@ export default function Register() {
                         value={values[RegisterFormKeys.Password]}
                         onChange={changeHandler}
                     />
+                    {errors.password && <p className="input-err-msg">{errors.password}</p>}
                 </Form.Group>
 
                 <Form.Group className="form-group">
@@ -59,11 +61,13 @@ export default function Register() {
                         value={values[RegisterFormKeys.RepeatPassword]}
                         onChange={changeHandler}
                     />
+                    {errors.repeatPassword && <p className="input-err-msg">{errors.repeatPassword}</p>}
                 </Form.Group>
 
                 <Button variant="primary" type="submit" className="submit-btn">
                     Create Account
                 </Button>
+                {errors.emptyField && <p className="input-err-msg">{errors.emptyField}</p>}
                 <div className="login-link-box">
                     <p>Already have an account?</p>
                     <Link to="/login" className="login-link">Click here to login</Link>
