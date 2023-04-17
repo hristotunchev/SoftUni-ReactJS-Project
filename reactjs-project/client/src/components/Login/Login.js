@@ -49,11 +49,14 @@ export default function Login() {
                     />
                     {errors.password && <p className="input-err-msg">{errors.password}</p>}
                 </Form.Group>
-                <Button variant="primary" type="submit" className="submit-btn">
-                    Login
-                </Button>
-                {errors.emptyField && <p className="input-err-msg">{errors.emptyField}</p>}
 
+                <div className="submit-btn-container">
+                    <Button variant="primary" type="submit" className="submit-btn">
+                        Login
+                    </Button>
+                    {errors.emptyField && <p className="input-err-msg">{errors.emptyField}</p>}
+                </div>
+                
                 <div className="register-link-box">
                     <p>Don't have an account?</p>
                     <Link to="/register" className="register-link">Click here to register</Link>

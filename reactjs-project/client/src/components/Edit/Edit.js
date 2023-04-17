@@ -103,11 +103,14 @@ export default function Edit() {
                     />
                     {errors.description && <p className="input-err-msg">{errors.description}</p>}
                 </Form.Group>
+                
+                <div className="car-submit-btn-container">
+                    <Button variant="primary" type="submit" className="submit-btn">
+                        Edit
+                    </Button>
+                    {errors.emptyField && <p className="input-err-msg">{errors.emptyField}</p>}
+                </div>
 
-                <Button variant="primary" type="submit" className="submit-btn">
-                    Edit
-                </Button>
-                {errors.emptyField && <p className="input-err-msg">{errors.emptyField}</p>}
             </Form>
         </div>
     );

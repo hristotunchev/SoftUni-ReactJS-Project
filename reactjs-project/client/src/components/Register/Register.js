@@ -63,11 +63,14 @@ export default function Register() {
                     />
                     {errors.repeatPassword && <p className="input-err-msg">{errors.repeatPassword}</p>}
                 </Form.Group>
+                
+                <div className="submit-btn-container">
+                    <Button variant="primary" type="submit" className="submit-btn">
+                        Create Account
+                    </Button>
+                    {errors.emptyField && <p className="input-err-msg">{errors.emptyField}</p>}
+                </div>
 
-                <Button variant="primary" type="submit" className="submit-btn">
-                    Create Account
-                </Button>
-                {errors.emptyField && <p className="input-err-msg">{errors.emptyField}</p>}
                 <div className="login-link-box">
                     <p>Already have an account?</p>
                     <Link to="/login" className="login-link">Click here to login</Link>

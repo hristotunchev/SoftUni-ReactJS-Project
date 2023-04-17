@@ -63,3 +63,8 @@
 .description-area {
     height: 155px !important;
 }
+
+.car-submit-btn-container {
+    height: 2.8rem;
+    margin-bottom: 2rem;
+}

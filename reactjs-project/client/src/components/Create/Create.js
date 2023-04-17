@@ -96,10 +96,13 @@ export default function Create() {
                     {errors.description && <p className="input-err-msg">{errors.description}</p>}
                 </Form.Group>
 
-                <Button variant="primary" type="submit" className="submit-btn">
-                    Add Vehicle
-                </Button>
-                {errors.emptyField && <p className="input-err-msg">{errors.emptyField}</p>}
+                <div className="car-submit-btn-container">
+                    <Button variant="primary" type="submit" className="submit-btn">
+                        Add Vehicle
+                    </Button>
+                    {errors.emptyField && <p className="input-err-msg">{errors.emptyField}</p>}
+                </div>
+
             </Form>
         </div>
     );

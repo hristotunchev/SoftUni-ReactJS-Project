@@ -74,6 +74,10 @@
     margin-top: 5px !important;
 }
 
+.submit-btn-container {
+    height: 2.8rem;
+}
+
 /* div>p {
     font-size: small;
     color: rgb(231, 204, 0);
