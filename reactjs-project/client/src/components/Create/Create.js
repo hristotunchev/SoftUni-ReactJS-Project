@@ -9,7 +9,7 @@ import './Create.css';
 
 export default function Create() {
     const { onCreateCarSubmit } = useContext(CarContext);
-    const { values, changeHandler, onSubmit } = useForm({
+    const { values, changeHandler, onSubmit, errors } = useForm({
         make: '',
         model: '',
         coverPhotoUrl: '',
@@ -32,6 +32,7 @@ export default function Create() {
                         value={values.make}
                         onChange={changeHandler}
                     />
+                    {errors.make && <p className="input-err-msg">{errors.make}</p>}
                 </Form.Group>
 
                 <Form.Group className="form-group">
@@ -43,6 +44,7 @@ export default function Create() {
                         value={values.model}
                         onChange={changeHandler}
                     />
+                    {errors.model && <p className="input-err-msg">{errors.model}</p>}
                 </Form.Group>
 
                 <Form.Group className="form-group">
@@ -54,6 +56,7 @@ export default function Create() {
                         value={values.coverPhotoUrl}
                         onChange={changeHandler}
                     />
+                    {errors.coverPhotoUrl && <p className="input-err-msg">{errors.coverPhotoUrl}</p>}
                 </Form.Group>
 
                 <Form.Group className="form-group">
@@ -65,6 +68,7 @@ export default function Create() {
                         value={values.secondPhotoUrl}
                         onChange={changeHandler}
                     />
+                    {errors.secondPhotoUrl && <p className="input-err-msg">{errors.secondPhotoUrl}</p>}
                 </Form.Group>
 
                 <Form.Group className="form-group">
@@ -76,6 +80,7 @@ export default function Create() {
                         value={values.thirdPhotoUrl}
                         onChange={changeHandler}
                     />
+                    {errors.thirdPhotoUrl && <p className="input-err-msg">{errors.thirdPhotoUrl}</p>}
                 </Form.Group>
 
                 <Form.Group>
@@ -88,11 +93,13 @@ export default function Create() {
                         value={values.description}
                         onChange={changeHandler}
                     />
+                    {errors.description && <p className="input-err-msg">{errors.description}</p>}
                 </Form.Group>
 
                 <Button variant="primary" type="submit" className="submit-btn">
                     Add Vehicle
                 </Button>
+                {errors.emptyField && <p className="input-err-msg">{errors.emptyField}</p>}
             </Form>
         </div>
     );

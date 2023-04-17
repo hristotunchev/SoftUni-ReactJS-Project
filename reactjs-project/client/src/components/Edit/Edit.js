@@ -15,7 +15,7 @@ export default function Edit() {
     const { carId } = useParams();
     const carService = useService(carServiceFactory);
 
-    const { values, changeHandler, onSubmit, changeValues } = useForm({
+    const { values, changeHandler, onSubmit, changeValues, errors } = useForm({
         _id: '',
         make: '',
         model: '',
@@ -45,6 +45,7 @@ export default function Edit() {
                         value={values.make}
                         onChange={changeHandler}
                     />
+                    {errors.make && <p className="input-err-msg">{errors.make}</p>}
                 </Form.Group>
 
                 <Form.Group className="form-group">
@@ -55,6 +56,7 @@ export default function Edit() {
                         value={values.model}
                         onChange={changeHandler}
                     />
+                    {errors.model && <p className="input-err-msg">{errors.model}</p>}
                 </Form.Group>
 
                 <Form.Group className="form-group">
@@ -65,6 +67,7 @@ export default function Edit() {
                         value={values.coverPhotoUrl}
                         onChange={changeHandler}
                     />
+                    {errors.coverPhotoUrl && <p className="input-err-msg">{errors.coverPhotoUrl}</p>}
                 </Form.Group>
 
                 <Form.Group className="form-group">
@@ -75,6 +78,7 @@ export default function Edit() {
                         value={values.secondPhotoUrl}
                         onChange={changeHandler}
                     />
+                    {errors.secondPhotoUrl && <p className="input-err-msg">{errors.secondPhotoUrl}</p>}
                 </Form.Group>
 
                 <Form.Group className="form-group">
@@ -85,6 +89,7 @@ export default function Edit() {
                         value={values.thirdPhotoUrl}
                         onChange={changeHandler}
                     />
+                    {errors.thirdPhotoUrl && <p className="input-err-msg">{errors.thirdPhotoUrl}</p>}
                 </Form.Group>
 
                 <Form.Group>
@@ -96,11 +101,13 @@ export default function Edit() {
                         value={values.description}
                         onChange={changeHandler}
                     />
+                    {errors.description && <p className="input-err-msg">{errors.description}</p>}
                 </Form.Group>
 
                 <Button variant="primary" type="submit" className="submit-btn">
                     Edit
                 </Button>
+                {errors.emptyField && <p className="input-err-msg">{errors.emptyField}</p>}
             </Form>
         </div>
     );
