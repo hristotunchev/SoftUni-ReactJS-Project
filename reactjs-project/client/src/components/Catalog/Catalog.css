@@ -2,8 +2,15 @@
     font-family: "Monoton", sans-serif;
     text-shadow: 3px 3px black;
     color: #815800;
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 2rem !important;
+}
+
+.all-cars {
+    font-family: "Monoton", sans-serif;
+    text-shadow: 3px 3px black;
+    color: #815800;
+    font-size: 3.5rem;
 }
 
 .g-4 {
