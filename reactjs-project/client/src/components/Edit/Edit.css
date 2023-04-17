@@ -46,6 +46,7 @@
 
 .form-group {
     margin-bottom: 3px !important;
+    height: 5.1rem;
 }
 
 .input-err-msg {
@@ -56,4 +57,8 @@
     font-size: 12px;
     font-family: Verdana, Geneva, Tahoma, sans-serif !important;
     margin-top: 5px !important;
+}
+
+.description-area {
+    height: 155px !important;
 }

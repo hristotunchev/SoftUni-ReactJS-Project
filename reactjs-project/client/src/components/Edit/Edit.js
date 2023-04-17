@@ -92,11 +92,11 @@ export default function Edit() {
                     {errors.thirdPhotoUrl && <p className="input-err-msg">{errors.thirdPhotoUrl}</p>}
                 </Form.Group>
 
-                <Form.Group>
+                <Form.Group className="description-area">
                     <Form.Label className="input-label">Description</Form.Label>
                     <Form.Control
                         as="textarea"
-                        style={{ height: '100px', marginBottom: '15px' }}
+                        style={{ height: '100px', resize: "none", marginBottom: '3px' }}
                         name="description"
                         value={values.description}
                         onChange={changeHandler}
