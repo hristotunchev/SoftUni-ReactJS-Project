@@ -67,3 +67,48 @@
     height: 2.8rem;
     margin-bottom: 2rem;
 }
+
+
+.err-mdl {
+    display: flex;
+}
+
+.mdl-title {
+    color: rgb(23, 23, 23);
+    font-family: "Tilt Warp";
+    font-size: 21px;
+}
+
+.err-hdr {
+    background-color: rgb(97, 68, 23);
+    color: rgb(23, 23, 23);
+    font-family: "Tilt Warp";
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.err-bd {
+    background-color: bisque;
+    color: rgb(23, 23, 23);
+    font-family: "Tilt Warp";
+}
+
+.err-ftr {
+    background-color: rgb(97, 68, 23) !important;
+    color: rgb(23, 23, 23);
+    justify-content: center !important;
+    font-family: "Tilt Warp";
+    font-size: 20px;
+}
+
+.err-ftrp {
+    background-color: rgb(97, 68, 23);
+    color: #ffae00;
+    justify-content: center;
+    font-family: "Monoton";
+    font-size: 25px;
+}
+
+.err-msg {
+    font-size: 18px;
+}

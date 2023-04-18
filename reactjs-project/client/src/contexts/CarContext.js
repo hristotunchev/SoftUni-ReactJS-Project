@@ -10,29 +10,54 @@ export const CarProvider = ({
 }) => {
     const navigate = useNavigate();
     const [cars, setCars] = useState([]);
+    const [carErrors, setCarErrors] = useState([]);
     const carService = carServiceFactory();
 
     useEffect(() => {
         carService.getAll()
             .then(result => {
                 setCars(result);
-            });
+            })
+            .catch((error) => {
+                setCarErrors(error)
+                setTimeout(() => {
+                    setCarErrors([]);
+                }, 5000);
+            })
     }, []);
 
     const onCreateCarSubmit = async (data) => {
-        const newCar = await carService.create(data);
+        try {
 
-        setCars(state => [...state, newCar]);
-
-        navigate('/catalog');
+            const newCar = await carService.create(data);
+            
+            setCars(state => [...state, newCar]);
+            
+            navigate('/catalog');
+        } catch (error) {
+            console.log(error);
+            setCarErrors(error);
+            setTimeout(() => {
+                setCarErrors([]);
+            }, 5000);
+        }
     };
 
     const onCarEditSubmit = async (values) => {
-        const result = await carService.edit(values._id, values);
+        try {
 
-        setCars(state => state.map(x => x._id === values._id ? result : x));
-
-        navigate(`/catalog/${values._id}`);
+            const result = await carService.edit(values._id, values);
+            
+            setCars(state => state.map(x => x._id === values._id ? result : x));
+            
+            navigate(`/catalog/${values._id}`);
+        } catch (error) {
+            console.log(error);
+            setCarErrors(error);
+            setTimeout(() => {
+                setCarErrors([]);
+            }, 5000);
+        }
     };
 
     const getCar = (carId) => {
@@ -48,7 +73,8 @@ export const CarProvider = ({
         onCreateCarSubmit,
         onCarEditSubmit,
         getCar,
-        deleteCar
+        deleteCar,
+        carErrors
     };
 
     return (

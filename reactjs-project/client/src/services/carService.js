@@ -6,22 +6,37 @@ export const carServiceFactory = (token) => {
     const request = requestFactory(token);
 
     const getAll = async () => {
-        const result = await request.get(baseUrl);
-        const cars = Object.values(result);
-
-        return cars;
+        try {
+            const result = await request.get(baseUrl);
+            const cars = Object.values(result);
+            
+            return cars;
+        } catch (error) {
+            console.log(error);
+            throw error;
+        }
     };
 
     const getOne = async (carId) => {
-        const result = await request.get(`${baseUrl}/${carId}`);
-
-        return result;
+        try {
+            const result = await request.get(`${baseUrl}/${carId}`);
+            
+            return result;
+        } catch (error) {
+            console.log(error);
+            throw error;
+        }
     };
 
     const create = async (carData) => {
-        const result = await request.post(baseUrl, carData);
-
-        return result;
+        try {
+            const result = await request.post(baseUrl, carData);
+            
+            return result;
+        } catch (error) {
+            console.log(error);
+            throw error;
+        }
     };
 
     const edit = (carId, data) => request.put(`${baseUrl}/${carId}`, data);

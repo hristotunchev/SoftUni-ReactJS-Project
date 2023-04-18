@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { authServiceFactory } from '../services/authService.js';
@@ -11,6 +11,7 @@ export const AuthProvider = ({
 }) => {
     const [auth, setAuth] = useLocalStorage('auth', {});
     const navigate = useNavigate();
+    const [authErrors, setAuthErrors] = useState([]);
 
     const authService = authServiceFactory(auth.accessToken);
 
@@ -23,6 +24,10 @@ export const AuthProvider = ({
             navigate('/catalog');
         } catch (error) {
             console.log(error);
+            setAuthErrors(error);
+            setTimeout(() => {
+                setAuthErrors([]);
+            }, 5000);
         }
     };
 
@@ -40,6 +45,10 @@ export const AuthProvider = ({
             navigate('/catalog');
         } catch (error) {
             console.log(error);
+            setAuthErrors(error);
+            setTimeout(() => {
+                setAuthErrors([]);
+            }, 5000);
         }
     };
 
@@ -56,7 +65,8 @@ export const AuthProvider = ({
         userId: auth._id,
         token: auth.accessToken,
         userEmail: auth.email,
-        isAuthenticated: !!auth.accessToken
+        isAuthenticated: !!auth.accessToken,
+        authErrors
     };
 
     return (
