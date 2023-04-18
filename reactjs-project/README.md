@@ -3,13 +3,20 @@ Classic Cars Club is an application built using create-react-app and react-boots
 
 ### This application is using the [SoftUni Practice Server](https://github.com/softuni-practice-server/softuni-practice-server)
 
+## Installation
+To install the project, follow these steps:
+
+1. Clone the repository to your local machine.
+2. Navigate to the client folder.
+3. Run 'npm install' to install the necessary dependencies.
+
 ## Usage
 To use the application, follow these steps:
 
-* Navigate to the client folder.
-* ### Run npm start to start the client application.
-* Navigate to the server folder.
-* ### Run node server.js to start the server application.
+1. Navigate to the client folder.
+2. Run 'npm start' to start the client application.
+3. Navigate to the server folder.
+4. Run 'node server.js' to start the server application.
 
 ## Features
 The following features are available in the Classic Cars Club application:
