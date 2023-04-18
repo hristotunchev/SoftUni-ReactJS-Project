@@ -20,5 +20,30 @@ The following features are available in the Classic Cars Club application:
 * User authentication and registration
 * Ability for vehicle owners to edit and delete their own vehicles
 
+## Architecture
+The application is divided into components with separate CSS files. The whole application is wrapped in context wrapper components (CarContext, AuthContext) which provide data to the components. The application is using services for authentication and CRUD operations and a requester to build requests. It is also using some custom hooks - useForm for controlling the forms, useLocalStorage for persisting user sessions, and useService which provides a common interface for different services.
+
+### Components
+The application is divided into components that are responsible for rendering different parts of the UI. Each component has a separate CSS file for styling.
+
+### Context
+The application uses two context wrapper components, CarContext and AuthContext, to provide data to the components. CarContext provides data related to cars in the catalog, while AuthContext provides data related to authentication and user sessions.
+
+### Services
+The application uses services for authentication and CRUD operations. These services provide a common interface for working with different data sources (e.g. local storage, REST API, etc.). They also handle errors and return data in a consistent format.
+
+### Requester
+The application uses a requester to build requests.
+
+### Custom Hooks
+The application uses several custom hooks:
+
+* useForm: This hook is used to control forms in the application. It provides functionality for validating form inputs, handling form submissions, and resetting form data.
+* useLocalStorage: This hook is used to persist user sessions in local storage. It provides functionality for storing and retrieving data from local storage.
+* useService: This hook provides a common interface for different services. It is used to abstract away the details of working with specific services and provides a unified interface for the rest of the application.
+
+### Route Guards
+The application uses route guards to prevent guest users from accessing private user pages and to prevent non-owners from accessing owner pages.
+
 ## License
 This project is licensed under the MIT License.
